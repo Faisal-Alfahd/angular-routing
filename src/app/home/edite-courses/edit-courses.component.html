@@ -1,0 +1,25 @@
+<div class="container" style="padding-top: 1rem">
+  <ul class="list-group" *ngFor="let course of courses$">
+    <li class="list-group-item">
+      <span class="pull-left ">
+        <img
+          [src]="course.path"
+          style="border: 1px solid silver; border-radius: 50%"
+          width="50"
+          height="50"
+        />
+      </span>
+      <h6 style="padding-left: 2rem; display: inline">
+        {{ course.courseName }}
+      </h6>
+      <span class="pull-right">
+        <button class="btn btn-success" style="display: inline">
+          Edit
+        </button>
+        <button class="btn btn-danger pull-right" style="margin-left: 3px">
+          Delete
+        </button>
+      </span>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,49 @@
+<div class="card">
+  <div class="card-body">
+
+    <ul>
+      <li>
+        <img src="../../../assets/222.png" />
+        <h3>{{ user.users.name }}</h3>
+        <p>
+          User ID: <span>{{ user.users.userId }}</span>
+        </p>
+        <p>
+          UserName: <span>{{ user.users.userName }}</span>
+        </p>
+        <p>
+          User Password: <span>{{user.users.password }}</span>
+        </p>
+        <p>
+          User City: <span>{{ user.users.userCity }}</span>
+        </p>
+        <p>
+          User Type: <span> {{ user.users.userType }}</span>
+        </p>
+      </li>
+    </ul>
+  </div>
+  <div class="card-footer">
+    <a
+      class="btn btn-dark"
+      [routerLink]="['/users', { name: user.users.name }]"
+      queryParamsHandling="marge"
+      fragment="test"
+    >
+      Back
+    </a>
+    <button class="btn btn-dark pull-right" (click)="viewNextUser()">
+      Next User
+    </button>
+  </div>
+</div>
+
+<div>
+  {{errorMsg}}
+</div>
+
+<div style="height: 200px"></div>
+<div class="div-style" id="active-user">
+  <span class="pull-right" style="margin: 8px 7px 0 0">Active</span>
+  <span class="span-style pull-right"></span>
+</div>

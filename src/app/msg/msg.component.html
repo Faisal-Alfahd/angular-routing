@@ -1,0 +1,16 @@
+<div class="card" *ngIf="message && !closed">
+  <div class="card-body message bg-dark">
+    {{message}}
+    <a class="float-right closed" (click)="close()">
+      <i class="fa fa-times-circle"></i>
+    </a>
+  </div>
+</div>
+
+<a class="button bg-dark" (click)="open()" *ngIf="closed">
+  Show
+  <i class="fa fa-angle-double-right"></i>
+  <i class="fa fa-angle-double-right"></i>
+</a>
+
+

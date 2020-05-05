@@ -1,0 +1,14 @@
+<div class="container">
+  <input
+    class="form-control"
+    [(ngModel)]="inputSearch"
+    placeholder="Search Users Here"
+    />
+</div>
+
+
+<app-users-list
+  [users$]="usersList$"
+  [inputSearch]="inputSearch"
+  [fullUsersList$]="fullUsersList$">
+</app-users-list>

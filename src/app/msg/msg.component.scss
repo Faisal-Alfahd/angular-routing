@@ -1,0 +1,29 @@
+.message {
+  position: absolute;
+  z-index: 1;
+  padding: 0 0 0 10px;
+  color: aliceblue;
+  box-shadow: 0 0 0 1.2px grey;
+  width: 100%;
+  text-align: center;
+}
+
+.closed {
+  padding-right: 5px;
+}
+
+.closed:hover {
+  cursor: pointer;
+}
+
+.button:hover {
+  cursor: pointer;
+  color: white;
+}
+
+.button {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  padding: 0 15px 0 5px;
+}

@@ -1,0 +1,64 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark Shadow">
+    <div class="navbar-brand-two" href="#">
+        <img
+            src="../assets/100.png"
+            width="50"
+            height="50"
+            alt="logo" />
+    </div>
+    <span class="navbar-brand">Routing</span>
+    <div class="justify-content-left">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a
+                    routerLink="/home"
+                    routerLinkActive="is-active"
+                    [routerLinkActiveOptions]="{ exact: true }">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li class="nav-item" *ngIf="IsAdmin && IsSignedIn">
+                <a
+                    routerLink="home/edit-courses"
+                    routerLinkActive="is-active">
+                    <span>Edit Courses</span>
+                </a>
+            </li>
+            <li class="nav-item" *ngIf="IsAdmin && IsSignedIn">
+                <a
+                    routerLink="/users"
+                    routerLinkActive="is-active">
+                    <span>Users</span>
+                </a>
+            </li>
+            <li class="nav-item" *ngIf="IsSignedIn">
+                <a
+                    [routerLink]="['profile', id]"
+                    routerLinkActive="is-active">
+                    <span>Profile</span>
+                </a>
+            </li>
+            <li class="nav-item" *ngIf="!IsSignedIn">
+                <a
+                    routerLink="/auth/login"
+                    routerLinkActive="is-active">
+                    <span>Login</span>
+                </a>
+            </li>
+            <li class="nav-item" *ngIf="!IsSignedIn">
+                <a
+                    routerLink="/auth/signup"
+                    routerLinkActive="is-active">
+                    <span>Signup</span>
+                </a>
+            </li>
+            <li class="nav-item" *ngIf="IsSignedIn">
+                <a
+                    routerLink="/auth/signout"
+                    routerLinkActive="is-active">
+                    <span>Signout</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
